@@ -10,6 +10,54 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <h1 class="title is-5">Harriet C-W</h1>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">Home</a>
+          <a class="navbar-item">Gallery</a>
+          <a class="navbar-item">About</a>
+          <a class="navbar-item">Contact</a>
+        </div>
+      </div>
+    </nav>
+    
+    <% if flash[:notice] %>
+      <div class="notification is-dark global-notification">
+        <p><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="notification is-danger global-notification">
+        <p><%= alert %></p>
+      </div>
+    <% end %>
+
+    <br />
+
+    <main class="mt-6">
+      <%= yield %>
+    </main>
+    
+    <footer class="footer is-fixed-bottom">
+      <div class="content has-text-centered">
+        <p>
+          Website built by <strong>Guy Chamberlain-Webber</strong>.
+        </p>
+      </div>
+    </footer>
+
   </body>
 </html>
