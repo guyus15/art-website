@@ -47,17 +47,19 @@
 
     <br />
 
-    <main class="mt-6">
-      <%= yield %>
-    </main>
-    
-    <footer class="footer is-fixed-bottom">
-      <div class="content has-text-centered">
-        <p>
-          Website built by <strong>Guy Chamberlain-Webber</strong>.
-        </p>
-      </div>
-    </footer>
+    <div id="page-container">
+      <main id="content-wrap" class="mt-6">
+        <%= yield %>
+      </main>
+      
+      <footer id="footer" class="footer">
+        <div class="content has-text-centered">
+          <p>
+            Website built by <strong>Guy Chamberlain-Webber</strong>.
+          </p>
+        </div>
+      </footer>
+    </div>
 
   </body>
 </html>
