@@ -14,10 +14,17 @@
  *= require_self
  */
 
- @import 'bulma';
+
+
+
+@import "font-awesome";
+@import 'bulma';
+
+
 
 .notification{
     border-radius: 0;
+    margin-top:3rem;
 }
 
 .notification:not(:last-child){

@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('turbolinks:load', () => {
 
     navbarBurger = document.querySelectorAll(".navbar-burger")[0];
 
@@ -10,3 +11,4 @@ document.addEventListener('DOMContentLoaded', () => {
         target.classList.toggle('is-active');
     } )
 });
+

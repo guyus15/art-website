@@ -1,25 +1,27 @@
 
-<% if @posts.any? %>
 <div class="container">
   <div class="card">
     <div class="card-content">
+      <% if @posts.any? %>
         <% if Post.first.image.attached? %>
         <div class="main-img">
           <%= image_tag(url_for(Post.first.image), id:"current")%>
         </div>
         <% end %>
-      <div class="imgs">
-        <% @posts.each do |post| %>
-          <% if post.image.attached? %>
-          <div class="image is-square">
-            <%= image_tag(url_for(post.image)) %>
-          </div>
+        <div class="imgs">
+          <% @posts.each do |post| %>
+            <% if post.image.attached? %>
+            <div class="image is-square">
+              <%= image_tag(url_for(post.image)) %>
+            </div>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
+        </div>
+      <% else %>
+        <h1 class="title is-5">There are no posts right now :/</h1>
+      <% end %>
     </div>
   </div>
 </div>
-<% end %>
 
 <%= javascript_include_tag 'index' %>
