@@ -16,6 +16,11 @@
             </div>
             <% end %>
           <% end %>
+          <% if admin_signed_in? %>
+            <div class="image is-square">
+              <p>Text</p>
+            </div>
+          <% end %>
         </div>
       <% else %>
         <h1 class="title is-5">There are no posts right now :/</h1>

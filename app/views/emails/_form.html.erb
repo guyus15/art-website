@@ -1,0 +1,21 @@
+<%= form_with(model: email, local: true) do |form| %>
+  
+  <div class="field">
+    <%= form.label "Your name", class:"label" %>
+    <%= form.text_field :author, placeholder:"e.g. John Smith", class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject, class:"label" %>
+    <%= form.text_field :subject, placeholder:"e.g. Business Enquiry", class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content, class:"label" %>
+    <%= form.text_area :content, placeholder:"Please include your email if you expect a response", class:"textarea" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Send", class:"button is-small is-info" %>
+  </div>
+<% end %>

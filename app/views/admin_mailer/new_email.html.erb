@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    <h1 class="title is-5">New Email</h1>
+                    <p>You have recieved a new email from a user on the art website.</p><br>
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong><%= @email.author %></strong><br><small><%= @email.subject %></small><br>
+                                        
+                                        <%= @email.content %>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

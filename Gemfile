@@ -66,3 +66,7 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'bulma-rails', '~> 0.9.0'
 
 gem 'font-awesome-rails'
+
+gem 'mail', '~> 2.7', '>= 2.7.1'
+
+gem 'figaro'
