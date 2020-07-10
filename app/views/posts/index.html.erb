@@ -1,11 +1,22 @@
-
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Home
+      </h1>
+      <h2 class="subtitle">
+        My name is Harriet Chamberlain-Webber
+      </h2>
+    </div>
+  </div>
+</section>
 <div class="container">
   <div class="card">
     <div class="card-content">
       <% if @posts.any? %>
         <% if Post.first.image.attached? %>
         <div class="main-img">
-          <%= image_tag(url_for(Post.first.image), id:"current")%>
+          <%= image_tag(url_for(Post.last.image), id:"current")%>
         </div>
         <% end %>
         <div class="imgs">
@@ -17,9 +28,13 @@
             <% end %>
           <% end %>
           <% if admin_signed_in? %>
-            <div class="image is-square">
-              <p>Text</p>
+            <%= link_to new_post_path do %>
+            <div id="new-post" class="image is-square">
+              <div>
+                <p class="button is-info">Add new post</p>
+              </div>
             </div>
+            <% end %>
           <% end %>
         </div>
       <% else %>

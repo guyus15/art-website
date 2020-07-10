@@ -1,7 +1,8 @@
 // Code controlling the index webpage.
 
 document.addEventListener('turbolinks:load', () => {
-    if(window.location.pathname == '/'){
+    if(window.location.pathname == '/' || window.location.pathname =="/posts"){
+
         const current = document.querySelector('#current');
         const imgs = document.querySelectorAll('.imgs img');
         const opacity = 0.4;
@@ -25,6 +26,8 @@ document.addEventListener('turbolinks:load', () => {
             setTimeout(() => e.target.classList.remove('throb'),200);
 
             e.target.style.opacity = opacity;
+
+            current.scrollIntoView();
         }
     }
 });

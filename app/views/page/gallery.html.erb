@@ -1,3 +1,15 @@
+<section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Gallery
+        </h1>
+        <h2 class="subtitle">
+          A showcase of my work
+        </h2>
+      </div>
+    </div>
+</section>
 <div class="container">
     <% @posts_by_year.each do |year| %>
         <div class="card">
@@ -13,6 +25,26 @@
                             <% if post.image.attached? %>
                             <div class="image is-square">
                                 <%= image_tag(url_for(post.image)) %>
+
+                                <div class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-card">
+                                        <header class="modal-card-head">
+                                            <p class="modal-card-title"><%= post.title %></p>
+                                        </header>
+                                        <section class="modal-card-body">
+                                            <%= render '/posts/post', post: post %>
+                                        </section>
+                                        <footer class="modal-card-foot">
+                                            <% if admin_signed_in? %>
+                                                <%= link_to "Edit", edit_post_path(post), class:"button is-secondary" %>
+                                                <%= link_to "Delete", post, method: :delete, class:"button is-danger", data: {confirm: "Are you sure?"} %>              
+                                            <% end %>                                      
+                                        </footer>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
+
+                                </div>
                             </div>
                             <% end %>
                         <% end %>
@@ -22,3 +54,5 @@
         </div>
     <% end %>
 </div>
+
+<%= javascript_include_tag 'gallery' %>
