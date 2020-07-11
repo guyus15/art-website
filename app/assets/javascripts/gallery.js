@@ -10,6 +10,9 @@ document.addEventListener('turbolinks:load', () => {
             var modal = e.target.parentNode.querySelector('div .modal');
             modal.classList.add("is-active");
          
+            e.target.classList.add('throb');
+            setTimeout(() => e.target.classList.remove('throb'),200);
+
             const exitBtns = document.querySelectorAll('button');
             exitBtns.forEach(btn => btn.addEventListener('click', exitModal));
 

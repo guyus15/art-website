@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
@@ -11,6 +11,7 @@ group :development, :test do
 end
  
 group :production do
+
   gem 'pg'
 end
 
@@ -55,6 +56,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'capistrano', '~> 3.14', '>= 3.14.1', require: false
+  gem 'capistrano-rails', '~> 1.5'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.6'
 end
 
 group :test do
@@ -77,3 +83,5 @@ gem 'font-awesome-rails'
 gem 'mail', '~> 2.7', '>= 2.7.1'
 
 gem 'figaro'
+
+gem 'yarn'

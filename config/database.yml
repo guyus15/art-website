@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
+  host: harrietcw.co.uk
+  adapter: sqlite3
+  pool: 5
   database: db/production.sqlite3
