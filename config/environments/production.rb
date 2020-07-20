@@ -105,5 +105,5 @@ Rails.application.configure do
     enable_starttls_auto: true 
   }
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'harrietcw.co.uk', port: 80 }
 end
