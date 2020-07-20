@@ -14,8 +14,5 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= stub index
-//= stub gallery
-//= stub about
 
 
