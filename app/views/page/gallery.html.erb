@@ -1,3 +1,24 @@
-<h1>Gallery</h1>
+<div class="container">
+    <% @posts_by_year.each do |year| %>
+        <div class="card">
+            <div class="card-content">
+                <div class="title is-5"><%= year[0] %></div>
 
-<p><%= @posts_by_years[0] %></p>
+                <% get_posts_by_month(year).each do |month| %>
+                    <br>
+                    <div class="heading"><%= get_month_name(month[0]) %></div>
+
+                    <div class="imgs">
+                        <% month[1].each do |post| %>
+                            <% if post.image.attached? %>
+                            <div class="image is-square">
+                                <%= image_tag(url_for(post.image)) %>
+                            </div>
+                            <% end %>
+                        <% end %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>
