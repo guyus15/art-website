@@ -1,7 +1,7 @@
 # Harriet Chamberlain-Webber's Digital Art Portfolio
 
 ## This is a website made with the Ruby on Rails backend built to provide a digital portfolio for Harriet Chamberlain-Webber
- ### [harrietcw.co.uk](<harrietcw.co.uk>)
+ ### [harrietcw.co.uk](<http://harrietcw.co.uk>)
 
  - Ruby Version: 2.7
  - Rails Version: 5.2.4
