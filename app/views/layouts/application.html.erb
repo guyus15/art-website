@@ -58,7 +58,7 @@
             Website built by <strong>Guy Chamberlain-Webber</strong>.
           </p>
           <% unless admin_signed_in? %>
-            <%= link_to "Admin", new_admin_session_path, class:"subtitle  is-size-7" %>
+            <%= link_to "Admin", new_admin_session_path, class:"subtitle is-size-7" %>
           <% else %>
             <%= link_to "Log Out", destroy_admin_session_path, method: :delete, class:"subtitle is-size-7" %>
           <% end %>
