@@ -25,6 +25,6 @@
 ## Deployment
   
   1. Commit any changes to this GitHub repository [link](<https://github.com/guyus15/art-website>)
-  2. From the host machine run `capistrano production deploy`
+  2. From the host machine run `cap production deploy`
   3. You made need to re-enter login details for the ActionMailer service in the *current* directory on the host machine.
 
