@@ -10,11 +10,6 @@ group :development, :test do
   gem 'sqlite3'
 end
  
-group :production do
-
-  gem 'pg'
-end
-
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'sassc', '~> 2.4'
@@ -39,11 +34,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'mimemagic'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -57,12 +51,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
-  gem 'capistrano', '~> 3.14', '>= 3.14.1', require: false
-  gem 'capistrano-rails', '~> 1.5'
-  gem 'capistrano-passenger', '~> 0.2.0'
-  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.6'
 end
+
+gem 'capistrano', '~> 3.14', '>= 3.14.1'
+gem 'capistrano-rails', '~> 1.5'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.6'
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
